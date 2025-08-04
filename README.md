@@ -94,6 +94,82 @@ Este projeto aplica os seguintes **padrões de integração** (Enterprise Integr
 | - Salva no MongoDB                     |
 
 +----------------------------------------+
+
+```
+
+
+## Compilação e Execução
+
+### Passos
+
+1. Clone o repositório.
+2. Inicie o MongoDB (se usar Docker):
+
+```bash
+docker run -d -p 27017:27017 --name mongo-funcionarios mongo
+```
+
+3. Compile o projeto:
+
+Navegue até a raiz do projeto (onde está o `pom.xml` principal) e execute:
+
+```bash
+mvn clean install
+```
+
+4. Execute os módulos em **três terminais diferentes**:
+
+#### Terminal 1: Módulo ORM
+
+```bash
+cd modulo-orm
+mvn spring-boot:run
+```
+
+> Este módulo também iniciará um broker ActiveMQ embutido na porta 61616.
+
+#### Terminal 2: Módulo ODM
+
+```bash
+cd modulo-odm
+mvn spring-boot:run
+```
+
+#### Terminal 3: Módulo Integrador
+
+```bash
+cd modulo-integrador
+mvn spring-boot:run
+```
+
+---
+
+## 5. Testes e Exemplos de Execução
+
+Com os três módulos rodando, você pode testar a integração.
+
+### Exemplo 1: Criar um novo funcionário
+
+Envie uma requisição **POST** para o Módulo ORM:
+
+```bash
+curl -X POST http://localhost:8081/funcionarios -H "Content-Type: application/json" -d '{
+  "nome": "João Silva",
+  "dataDeNascimento": "1990-01-15",
+  "salario": 5500.00
+}'
+```
+
+### Verifique o resultado no Módulo ODM:
+
+Envie uma requisição **GET** para o Módulo ODM:
+
+```bash
+curl http://localhost:8082/funcionarios
+```
+
+A saída deverá ser uma lista JSON contendo o funcionário `"João Silva"`.
+
 ---
 
 
