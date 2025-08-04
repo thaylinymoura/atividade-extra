@@ -1,0 +1,6 @@
+br/com/orm/ModuloOrmApplication.class
+br/com/orm/controller/FuncionarioController.class
+br/com/orm/repository/FuncionarioRepository.class
+br/com/orm/model/Funcionario.class
+br/com/orm/config/BrokerConfig.class
+br/com/orm/service/FuncionarioProducerService.class

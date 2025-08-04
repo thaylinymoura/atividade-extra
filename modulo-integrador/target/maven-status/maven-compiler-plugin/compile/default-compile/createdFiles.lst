@@ -1,0 +1,7 @@
+br/com/ufrn/imd/integrador/router/JmsToRestRouter.class
+br/com/ufrn/imd/integrador/ModuloIntegradorApplication.class
+br/com/ufrn/imd/integrador/processor/OrmToCanonicalFuncionarioProcessor.class
+br/com/ufrn/imd/integrador/config/JmsConfig.class
+br/com/ufrn/imd/integrador/processor/HttpSenderProcessor.class
+br/com/ufrn/imd/integrador/processor/CanonicalToOdmFuncionarioProcessor.class
+br/com/ufrn/imd/integrador/model/FuncionarioCanonical.class

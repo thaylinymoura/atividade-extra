@@ -1,0 +1,4 @@
+br/com/odm/repository/FuncionarioRepository.class
+br/com/odm/controller/FuncionarioController.class
+br/com/odm/model/Funcionario.class
+br/com/odm/ModuloOdmApplication.class
