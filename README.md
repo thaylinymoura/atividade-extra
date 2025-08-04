@@ -144,7 +144,7 @@ mvn spring-boot:run
 
 ---
 
-## 5. Testes e Exemplos de Execução
+## Testes e Exemplos de Execução
 
 Com os três módulos rodando, você pode testar a integração.
 
